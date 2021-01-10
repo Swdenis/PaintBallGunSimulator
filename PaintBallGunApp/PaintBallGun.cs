@@ -24,12 +24,8 @@ namespace PaintBallGunApp
             }
         }
 
-        public void Reload()
-        {
-            if (balls > MagazineSize)
-                BallsLoaded = MagazineSize;
-            else BallsLoaded = balls;
-        }
+        public void Reload() => BallsLoaded = balls > MagazineSize ? MagazineSize : balls;
+        
 
         public bool Shoot()
         {
